@@ -6,7 +6,7 @@ services:
     secrets:
       - secret-name
     environment:
-      - SECRET_NAME=/run/secrets/secret-name
+      - SECRET_NAME_FILE=/run/secrets/secret-name
     deploy:
       update_config:
         order: start-first
