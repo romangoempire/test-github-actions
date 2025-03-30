@@ -1,0 +1,17 @@
+services:
+  app:
+    container_name: secondhand-it
+    image: ghcr.io/${GIT_REPOSITORY}:${GIT_COMMIT_HASH:-latest}
+    ports:
+      - "8502:8501"
+    secrets:
+      - secret-name
+    environment:
+      - SECRET_NAME=/run/secrets/secret-name
+    deploy:
+      update_config:
+        order: start-firsts
+
+secrets:
+  secret-name:
+    external: true
