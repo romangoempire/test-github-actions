@@ -46,7 +46,7 @@ jobs:
     - name: Docker Stack Deploy
       uses: cssnr/stack-deploy-action@v1
       with:
-        name: ${{ github.repository}}
+        name: test-github-actions
         host: ${{ secrets.DOCKER_HOST }}
         user: ${{ secrets.DOCKER_USER }}
         ssh_key: ${{ secrets.DOCKER_SSH_KEY }}
