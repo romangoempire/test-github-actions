@@ -10,7 +10,7 @@ services:
       - SECRET_NAME=/run/secrets/secret-name
     deploy:
       update_config:
-        order: start-firsts
+        order: start-first
 
 secrets:
   secret-name:
