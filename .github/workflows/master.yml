@@ -42,7 +42,7 @@ jobs:
       run: |
         echo "GIT_COMMIT_HASH=${{ github.sha }}" >> ./envfile
         echo "GIT_REPOSITORY=${{ github.repository}}" >> ./envfile
-        echo "GIT_SECRET_VALUE"=${{ secrets.value }}" >> ./envfile
+        echo "GIT_SECRET_VALUE=${{ secrets.value }}" >> ./envfile
 
     - name: Docker Stack Deploy
       uses: cssnr/stack-deploy-action@v1
