@@ -10,3 +10,6 @@ with open(os.getenv("SECRET_NAME_FILE")) as f:
 
 
 st.write("Okay wow now on the other vps")
+
+
+st.info("This comes straight from github secret: ", os.getenv("GITHUB_SECRET"))

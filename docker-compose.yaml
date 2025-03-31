@@ -7,6 +7,7 @@ services:
       - secret-name
     environment:
       - SECRET_NAME_FILE=/run/secrets/secret-name
+      - GITHUB_SECRET=${GIT_SECRET_VALUE}
     deploy:
       update_config:
         order: start-first
