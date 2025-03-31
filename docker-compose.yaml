@@ -1,7 +1,5 @@
-
-
 services:
-  app:
+  web:
     image: ghcr.io/${GIT_REPOSITORY}:${GIT_COMMIT_HASH:-latest}
     ports:
       - "8502:8501"
